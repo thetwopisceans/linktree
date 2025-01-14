@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/linktree/static/js/main.cafd09a4.js",
+    "main.js": "/linktree/static/js/main.aaccd863.js",
     "static/media/me.jpeg": "/linktree/static/media/me.da0baf8a323856226d8a.jpeg",
     "index.html": "/linktree/index.html",
-    "main.cafd09a4.js.map": "/linktree/static/js/main.cafd09a4.js.map"
+    "main.aaccd863.js.map": "/linktree/static/js/main.aaccd863.js.map"
   },
   "entrypoints": [
-    "static/js/main.cafd09a4.js"
+    "static/js/main.aaccd863.js"
   ]
 }
