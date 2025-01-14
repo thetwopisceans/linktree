@@ -17,8 +17,6 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        width: '100vw',
-        height: '100vh',
         backgroundImage: "url('our_pic_linktree.jpeg')",
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
@@ -27,7 +25,8 @@ const useStyles = makeStyles((theme) => ({
     },
     profilePic: {
         borderRadius: '50%',
-        width: theme.spacing(12),
+        width: "12vw",
+        marginTop: theme.spacing(3),
         marginBottom: theme.spacing(2),
     },
     welcomeText: {
@@ -37,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
         animation: '$pulse 3s infinite',
     },
     description: {
-        marginBottom: theme.spacing(3),
+        marginBottom: theme.spacing(1),
         maxWidth: '600px',
         textAlign: 'center',
         backgroundColor: '#1e1e1e',
@@ -52,8 +51,8 @@ const useStyles = makeStyles((theme) => ({
     },
     linkButton: {
         borderRadius: '10px',
-        width: '100%',
-        height: theme.spacing(8),
+        width: '90%',
+        height: "8vh",
         backgroundColor: '#333333',
         display: 'flex',
         justifyContent: 'center',
@@ -101,7 +100,7 @@ const LinkHub = () => {
             <Typography variant="body1" className={classes.description}>
                 Your ultimate destination for hassle-free travel planning! We've curated a collection of our favorite travel resources for you.
             </Typography>
-            <Grid container spacing={3} className={classes.linkGrid}>
+            <Grid container spacing={1.5} className={classes.linkGrid}>
                 {[
                     { href: 'https://getyourguide.tp.st/O2gRPpzL', src: 'https://raw.githubusercontent.com/thetwopisceans/linktree/c68cb473d2de1454e1949e6ca44971d5c296921d/assets/gyg_logo.svg', new: true, width: '60vw', height: '60vw' },
                     { href: 'https://agoda.tp.st/ZEcYskb9', src: 'agoda_logo.svg' },
