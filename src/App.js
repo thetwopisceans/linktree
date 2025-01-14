@@ -8,6 +8,7 @@ import EmailIcon from '@material-ui/icons/Email';
 import GitHubIcon from '@material-ui/icons/GitHub';
 
 import profilePic from './images/me.jpeg'
+import travelBg from './images/travel-dark-bg-1.jpg'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -17,11 +18,12 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundImage: "url('our_pic_linktree.jpeg')",
+        backgroundImage: `url(${travelBg})`,
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundBlendMode: 'luminosity',
+        fontFamily: 'Roboto, sans-serif',
     },
     profilePic: {
         borderRadius: '50%',
@@ -31,19 +33,18 @@ const useStyles = makeStyles((theme) => ({
     },
     welcomeText: {
         color: '#ff4081',
-        fontFamily: 'emoji',
-        fontSize: '4vw', // Responsive font size
+        fontSize: 'calc(1.5vw + 1em)', // Responsive font size
         animation: '$pulse 3s infinite',
     },
     description: {
         marginBottom: theme.spacing(1),
         maxWidth: '600px',
         textAlign: 'center',
-        backgroundColor: '#1e1e1e',
+        backgroundColor: 'rgba(30, 30, 30, 0.5)',
         borderRadius: '10px',
         border: '1px solid #ff4081',
         padding: theme.spacing(2),
-        fontSize: '1.5vw', // Responsive font size
+        fontSize: 'calc(1.5vw + 0.3em)', // Responsive font size
     },
     linkGrid: {
         width: '80%',
@@ -51,6 +52,7 @@ const useStyles = makeStyles((theme) => ({
     },
     linkButton: {
         borderRadius: '10px',
+        border: '0.5px solid #ff4081',
         width: '90%',
         height: "8vh",
         backgroundColor: '#333333',
