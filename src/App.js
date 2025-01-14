@@ -1,0 +1,155 @@
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import { Box, Typography, Grid, Link, IconButton } from '@material-ui/core';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import TelegramIcon from '@material-ui/icons/Telegram';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import EmailIcon from '@material-ui/icons/Email';
+import GitHubIcon from '@material-ui/icons/GitHub';
+
+import profilePic from './images/me.jpeg'
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+        backgroundColor: '#121212',
+        color: '#ffffff',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '100vw',
+        height: '100vh',
+        backgroundImage: "url('our_pic_linktree.jpeg')",
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundBlendMode: 'luminosity',
+    },
+    profilePic: {
+        borderRadius: '50%',
+        width: theme.spacing(12),
+        marginBottom: theme.spacing(2),
+    },
+    welcomeText: {
+        color: '#ff4081',
+        fontFamily: 'emoji',
+        fontSize: '4vw', // Responsive font size
+        animation: '$pulse 3s infinite',
+    },
+    description: {
+        marginBottom: theme.spacing(3),
+        maxWidth: '600px',
+        textAlign: 'center',
+        backgroundColor: '#1e1e1e',
+        borderRadius: '10px',
+        border: '1px solid #ff4081',
+        padding: theme.spacing(2),
+        fontSize: '1.5vw', // Responsive font size
+    },
+    linkGrid: {
+        width: '80%',
+        justifyContent: 'center',
+    },
+    linkButton: {
+        borderRadius: '10px',
+        width: '100%',
+        height: theme.spacing(8),
+        backgroundColor: '#333333',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        margin: theme.spacing(1),
+        transition: 'box-shadow 0.3s ease-in-out',
+        '&:hover': {
+            backgroundColor: '#444444',
+            borderColor: '#ff4081',
+            boxShadow: '0 0 10px #ff4081, 0 0 20px #ff4081, 0 0 30px #ff4081',
+        },
+    },
+    socialIcons: {
+        color: '#ffffff',
+        display: 'flex',
+        justifyContent: 'space-evenly',
+        width: theme.spacing(28),
+        marginTop: theme.spacing(4),
+    },
+    '@keyframes pulse': {
+        '0%': {
+            transform: 'scale(1)',
+            opacity: 0.8,
+        },
+        '50%': {
+            transform: 'scale(1.1)',
+            opacity: 1,
+        },
+        '100%': {
+            transform: 'scale(1)',
+            opacity: 0.8,
+        },
+    },
+}));
+
+const LinkHub = () => {
+    const classes = useStyles();
+
+    return (
+        <Box className={classes.root}>
+            <img className={classes.profilePic} src={profilePic} alt="The Two Piscean's profile pic" />
+            <Typography variant="h4" className={classes.welcomeText}>
+                <strong>Welcome to thetwopisceans!</strong>
+            </Typography>
+            <Typography variant="body1" className={classes.description}>
+                Your ultimate destination for hassle-free travel planning! We've curated a collection of our favorite travel resources for you.
+            </Typography>
+            <Grid container spacing={3} className={classes.linkGrid}>
+                {[
+                    { href: 'https://getyourguide.tp.st/O2gRPpzL', src: 'https://raw.githubusercontent.com/thetwopisceans/linktree/c68cb473d2de1454e1949e6ca44971d5c296921d/assets/gyg_logo.svg', new: true, width: '60vw', height: '60vw' },
+                    { href: 'https://agoda.tp.st/ZEcYskb9', src: 'agoda_logo.svg' },
+                    { href: 'https://airhelp.tp.st/sncV94At', src: 'airhelp_logo.svg' },
+                    { href: 'https://cheapoair.tp.st/Q6g6Netc', src: 'cheapair_logo.svg' },
+                    { href: 'https://eatwith.tp.st/raDQCBCG', src: 'eatwith_logo.svg' },
+                    { href: 'https://tp.st/ilpIKfKX', src: 'expedia_logo.svg' },
+                    { href: 'https://flixbus.tp.st/6E1lmANC', src: 'flixbus_logo.svg' },
+                    { href: 'https://hilton.tp.st/KWkVv0JC', src: 'hilton_logo.svg' },
+                    { href: 'https://hostelworld.tp.st/L5x6A2Ek', src: 'hostelworld_logo.svg' },
+                    { href: 'https://klook.tp.st/u0w0SS5I', src: 'klook_logo.svg' },
+                    { href: 'https://omio.tp.st/ahI2FmOI', src: 'omio_logo.svg' },
+                    { href: 'https://oyohotels.tp.st/ols8vgQv', src: 'oyo_logo.svg' },
+                    { href: 'https://trainline.tp.st/mSg75zME', src: 'trainline_logo.svg' },
+                    { href: 'https://trip.tp.st/TSjcIaN6', src: 'trip_logo.svg' },
+                    { href: 'https://viator.tp.st/7Ruv7XSN', src: 'viator_logo.svg' },
+                ].map((link, index) => (
+                    <Grid item xs={6} sm={4} md={3} key={index}>
+                        <Link href={link.href} target="_blank" rel="noopener noreferrer" className={classes.linkButton}>
+                            <img
+                                src={link.new ? link.src : `https://raw.githubusercontent.com/thetwopisceans/linktree/073bc7c6cf89f713b8d2a79ac67248ff9070e6c7/assets/${link.src}`}
+                                width={link.width ? link.width : "90vw"}
+                                height={link.height ? link.height : "90vw"}
+                                alt="Primary Logo"
+                            />
+                        </Link>
+                    </Grid>
+                ))}
+            </Grid>
+            <Box className={classes.socialIcons}>
+                <IconButton color='inherit' component="a" href="https://www.instagram.com/thetwopisceans/" target="_blank" rel="noopener noreferrer">
+                    <InstagramIcon />
+                </IconButton>
+                <IconButton color='inherit' component="a" href="https://t.me/thetwopisceans" target="_blank" rel="noopener noreferrer">
+                    <TelegramIcon />
+                </IconButton>
+                <IconButton color='inherit' component="a" href="https://twitter.com/thetwopisceans" target="_blank" rel="noopener noreferrer">
+                    <TwitterIcon />
+                </IconButton>
+                <IconButton color='inherit' component="a" href="mailto:thetwopisceans@gmail.com">
+                    <EmailIcon />
+                </IconButton>
+                <IconButton color='inherit' component="a" href="https://github.com/kurtesy" target="_blank" rel="noopener noreferrer">
+                    <GitHubIcon />
+                </IconButton>
+            </Box>
+        </Box>
+    );
+};
+
+export default LinkHub;
