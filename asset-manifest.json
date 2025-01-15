@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/linktree/static/js/main.bc9cf8d6.js",
+    "main.js": "/linktree/static/js/main.c6c9f579.js",
     "static/media/travel-dark-bg-1.jpg": "/linktree/static/media/travel-dark-bg-1.ab201897b0df16b1d45f.jpg",
     "static/media/me.jpeg": "/linktree/static/media/me.da0baf8a323856226d8a.jpeg",
     "index.html": "/linktree/index.html",
-    "main.bc9cf8d6.js.map": "/linktree/static/js/main.bc9cf8d6.js.map"
+    "main.c6c9f579.js.map": "/linktree/static/js/main.c6c9f579.js.map"
   },
   "entrypoints": [
-    "static/js/main.bc9cf8d6.js"
+    "static/js/main.c6c9f579.js"
   ]
 }
