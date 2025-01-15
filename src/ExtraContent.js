@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
         margin: theme.spacing(2),
         boxShadow: theme.shadows[5],
         transition: 'transform 0.3s, box-shadow 0.3s',
+        cursor: 'pointer',
         '&:hover': {
             transform: 'scale(1.05)',
             boxShadow: theme.shadows[10],

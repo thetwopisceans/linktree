@@ -1,7 +1,10 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Typography, Grid, Link, IconButton } from '@material-ui/core';
+
 import ExtraContent from './ExtraContent';
+import InstagramPosts from './InstaPosts';
+
 
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TelegramIcon from '@material-ui/icons/Telegram';
@@ -152,6 +155,7 @@ const LinkHub = () => {
                 </IconButton>
             </Box>
             <ExtraContent />
+            <InstagramPosts />
         </Box>
     );
 };
