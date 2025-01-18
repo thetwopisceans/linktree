@@ -1,15 +1,12 @@
 {
   "files": {
-    "main.js": "/linktree/static/js/main.4cb2322a.js",
-    "static/media/milan.jpg": "/linktree/static/media/milan.944d4add18943867d34f.jpg",
-    "static/media/berlin.jpg": "/linktree/static/media/berlin.f95c172dc4bd3b0aa5d1.jpg",
-    "static/media/poznan.jpg": "/linktree/static/media/poznan.92fce8785ddcb42e1eb4.jpg",
+    "main.js": "/linktree/static/js/main.728d5802.js",
     "static/media/travel-dark-bg-1.jpg": "/linktree/static/media/travel-dark-bg-1.ab201897b0df16b1d45f.jpg",
     "static/media/me.jpeg": "/linktree/static/media/me.da0baf8a323856226d8a.jpeg",
     "index.html": "/linktree/index.html",
-    "main.4cb2322a.js.map": "/linktree/static/js/main.4cb2322a.js.map"
+    "main.728d5802.js.map": "/linktree/static/js/main.728d5802.js.map"
   },
   "entrypoints": [
-    "static/js/main.4cb2322a.js"
+    "static/js/main.728d5802.js"
   ]
 }
