@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Typography, Grid, Link, IconButton } from '@material-ui/core';
+import { Document } from 'react-pdf'
 
 import ExtraContent from './ExtraContent';
 import HamburgerMenu from './HamburgerMenu';
@@ -13,6 +14,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 
 import profilePic from './images/me.jpeg'
 import travelBg from './images/travel-dark-bg-1.jpg'
+import minMediaKit from './data/min-profile-media-kit.pdf'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -138,6 +140,7 @@ const LinkHub = () => {
                     </Grid>
                 ))}
             </Grid>
+            <iframe src={minMediaKit} width="100%" height="1000px" />
             <Box className={classes.socialIcons}>
                 <IconButton color='inherit' component="a" href="https://www.instagram.com/thetwopisceans/" target="_blank" rel="noopener noreferrer">
                     <InstagramIcon />
