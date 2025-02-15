@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/linktree/static/js/main.728d5802.js",
-    "static/media/travel-dark-bg-1.jpg": "/linktree/static/media/travel-dark-bg-1.ab201897b0df16b1d45f.jpg",
-    "static/media/me.jpeg": "/linktree/static/media/me.da0baf8a323856226d8a.jpeg",
-    "index.html": "/linktree/index.html",
-    "main.728d5802.js.map": "/linktree/static/js/main.728d5802.js.map"
+    "main.js": "/static/js/main.7c146311.js",
+    "static/media/travel-dark-bg-1.jpg": "/static/media/travel-dark-bg-1.ab201897b0df16b1d45f.jpg",
+    "static/media/me.jpeg": "/static/media/me.da0baf8a323856226d8a.jpeg",
+    "index.html": "/index.html",
+    "main.7c146311.js.map": "/static/js/main.7c146311.js.map"
   },
   "entrypoints": [
-    "static/js/main.728d5802.js"
+    "static/js/main.7c146311.js"
   ]
 }
