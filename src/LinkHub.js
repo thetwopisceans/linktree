@@ -3,8 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Box, Typography, Grid, Link, IconButton } from '@material-ui/core';
 
 import ExtraContent from './ExtraContent';
-import InstagramPosts from './InstaPosts';
-
+import HamburgerMenu from './HamburgerMenu';
 
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TelegramIcon from '@material-ui/icons/Telegram';
@@ -28,6 +27,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundBlendMode: 'luminosity',
+        backgroundAttachment: 'fixed',
         fontFamily: 'Roboto, sans-serif',
     },
     profilePic: {
@@ -100,6 +100,7 @@ const LinkHub = () => {
 
     return (
         <Box className={classes.root}>
+            <HamburgerMenu />
             <img className={classes.profilePic} src={profilePic} alt="The Two Piscean's profile pic" />
             <Typography variant="h4" className={classes.welcomeText}>
                 <strong>Welcome to thetwopisceans!</strong>
@@ -107,7 +108,7 @@ const LinkHub = () => {
             <Typography variant="body1" className={classes.description}>
                 Your ultimate destination for hassle-free travel planning! We've curated a collection of our favorite travel resources for you.
             </Typography>
-            <Grid container spacing={1.5} className={classes.linkGrid}>
+            <Grid container spacing={2} className={classes.linkGrid}>
                 {[
                     { href: 'https://getyourguide.tp.st/O2gRPpzL', src: 'https://raw.githubusercontent.com/thetwopisceans/linktree/c68cb473d2de1454e1949e6ca44971d5c296921d/assets/gyg_logo.svg', new: true, width: '60vw', height: '60vw' },
                     { href: 'https://agoda.tp.st/ZEcYskb9', src: 'agoda_logo.svg' },
@@ -155,7 +156,6 @@ const LinkHub = () => {
                 </IconButton>
             </Box>
             <ExtraContent />
-            <InstagramPosts />
         </Box>
     );
 };

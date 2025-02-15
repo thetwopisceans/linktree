@@ -1,9 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import LinkHub from './App'; // Importing the main App component
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import LinkHub from './LinkHub';
+import CountryTravelPlans from './CountryTravelPlans';
 
-// Rendering the App component into the root element
-ReactDOM.render(
-    <LinkHub />,
-    document.getElementById('root')
-);
+const App = () => {
+    return (
+        <Router>
+            <Routes>
+                <Route exact path="*" element={<LinkHub />} />
+                <Route path="/travelplans" element={<CountryTravelPlans />} />
+            </Routes>
+        </Router>
+    );
+};
+
+ReactDOM.render(<App />, document.getElementById('root'));

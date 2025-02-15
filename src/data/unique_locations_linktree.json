@@ -1,0 +1,349 @@
+[
+    {
+        "title": "Germany",
+        "image": "https://imgur.com/deutschland.jpg",
+        "description": "A country in Central Europe known for its rich history and cultural heritage.",
+        "cities": [
+            {
+                "title": "Pankow",
+                "image": "https://imgur.com/pankow.jpg",
+                "description": "A borough in Berlin, known for its historical sites and vibrant community."
+            },
+            {
+                "title": "Berlin",
+                "image": "https://imgur.com/berlin.jpg",
+                "description": "The capital city of Germany, famous for its art scene and modern landmarks."
+            },
+            {
+                "title": "Brandenburg",
+                "image": "https://imgur.com/brandenburg.jpg",
+                "description": "A state surrounding Berlin, known for its natural parks and historical towns."
+            },
+            {
+                "title": "Hamburg",
+                "image": "https://imgur.com/hamburg.jpg",
+                "description": "A major port city in northern Germany, known for its maritime heritage."
+            },
+            {
+                "title": "Teltow",
+                "image": "https://imgur.com/teltow.jpg",
+                "description": "A small town near Berlin, known for its charming old town and green spaces."
+            },
+            {
+                "title": "Bavaria",
+                "image": "https://imgur.com/bavaria.jpg",
+                "description": "A large state in southern Germany, famous for its Oktoberfest and alpine scenery."
+            },
+            {
+                "title": "Mecklenburg-Vorpommern",
+                "image": "https://imgur.com/mecklenburg.jpg",
+                "description": "A state in northern Germany, known for its Baltic Sea coastline and medieval towns."
+            }
+        ]
+    },
+    {
+        "title": "Portugal",
+        "image": "https://imgur.com/portugal.jpg",
+        "description": "A southern European country on the Iberian Peninsula, known for its rich maritime history.",
+        "cities": [
+            {
+                "title": "Porto",
+                "image": "https://imgur.com/porto.jpg",
+                "description": "A coastal city in northwest Portugal, known for its port wine and stately bridges."
+            },
+            {
+                "title": "Lisbon",
+                "image": "https://imgur.com/lisbon.jpg",
+                "description": "The hilly, coastal capital city of Portugal, known for its cafe culture and soulful Fado music."
+            },
+            {
+                "title": "Faro",
+                "image": "https://imgur.com/faro.jpg",
+                "description": "A city in southern Portugal, known for its historic old town and beautiful beaches."
+            },
+            {
+                "title": "Madeira",
+                "image": "https://imgur.com/madeira.jpg",
+                "description": "An archipelago in the North Atlantic Ocean, known for its wine and warm, subtropical climate."
+            },
+            {
+                "title": "Beja",
+                "image": "https://imgur.com/beja.jpg",
+                "description": "A city in southern Portugal, known for its medieval castle and rich agricultural land."
+            },
+            {
+                "title": "Vila Real",
+                "image": "https://imgur.com/vilareal.jpg",
+                "description": "A city in northern Portugal, known for its Baroque architecture and scenic landscapes."
+            }
+        ]
+    },
+    {
+        "title": "Morocco",
+        "image": "https://imgur.com/morocco.jpg",
+        "description": "A North African country bordering the Atlantic Ocean and Mediterranean Sea, known for its Berber, Arabian, and European cultural influences.",
+        "cities": [
+            {
+                "title": "Tinghir",
+                "image": "https://imgur.com/tinghir.jpg",
+                "description": "A town in the Drâa-Tafilalet region, known for its stunning Todra Gorge and palm groves."
+            },
+            {
+                "title": "Casablanca",
+                "image": "https://imgur.com/casablanca.jpg",
+                "description": "A port city and commercial hub in western Morocco, known for its modern architecture."
+            },
+            {
+                "title": "Marrakech",
+                "image": "https://imgur.com/marrakech.jpg",
+                "description": "A major city in western Morocco, known for its historic medina and vibrant souks."
+            },
+            {
+                "title": "Fes",
+                "image": "https://imgur.com/fes.jpg",
+                "description": "A northeastern city in Morocco, known for its medieval architecture and vibrant cultural scene."
+            },
+            {
+                "title": "Tangier",
+                "image": "https://imgur.com/tangier.jpg",
+                "description": "A Moroccan port on the Strait of Gibraltar, known for its rich history and cultural diversity."
+            },
+            {
+                "title": "Ouarzazate",
+                "image": "https://imgur.com/ouarzazate.jpg",
+                "description": "A city in southern Morocco, known as a gateway to the Sahara Desert."
+            },
+            {
+                "title": "Midelt",
+                "image": "https://imgur.com/midelt.jpg",
+                "description": "A town in central Morocco, known for its apple orchards and proximity to the Atlas Mountains."
+            }
+        ]
+    },
+    {
+        "title": "Czech Republic",
+        "image": "https://imgur.com/czech.jpg",
+        "description": "A landlocked country in Central Europe, known for its ornate castles and native beers.",
+        "cities": [
+            {
+                "title": "Prague",
+                "image": "https://imgur.com/prague.jpg",
+                "description": "The capital city of the Czech Republic, known for its Old Town Square and Gothic churches."
+            }
+        ]
+    },
+    {
+        "title": "Italy",
+        "image": "https://imgur.com/italy.jpg",
+        "description": "A European country with a long Mediterranean coastline, known for its influential art, architecture, and cuisine.",
+        "cities": [
+            {
+                "title": "Lombardy",
+                "image": "https://imgur.com/lombardy.jpg",
+                "description": "A region in northern Italy, known for its fashion capital, Milan."
+            },
+            {
+                "title": "Campania",
+                "image": "https://imgur.com/campania.jpg",
+                "description": "A region in southern Italy, known for its ancient ruins and dramatic coastline."
+            },
+            {
+                "title": "Piedmont",
+                "image": "https://imgur.com/piedmont.jpg",
+                "description": "A region in northwest Italy, known for its sophisticated cuisine and wines."
+            },
+            {
+                "title": "Lazio",
+                "image": "https://imgur.com/lazio.jpg",
+                "description": "A region in central Italy, home to the capital city, Rome."
+            }
+        ]
+    },
+    {
+        "title": "Poland",
+        "image": "https://imgur.com/poland.jpg",
+        "description": "A country in Central Europe, known for its medieval architecture and Jewish heritage.",
+        "cities": [
+            {
+                "title": "Masovian Voivodeship",
+                "image": "https://imgur.com/masovian.jpg",
+                "description": "A province in east-central Poland, home to the nation's capital, Warsaw."
+            },
+            {
+                "title": "Lesser Poland Voivodeship",
+                "image": "https://imgur.com/lesserpoland.jpg",
+                "description": "A province in southern Poland, known for its historic city, Kraków."
+            }
+        ]
+    },
+    {
+        "title": "Denmark",
+        "image": "https://imgur.com/denmark.jpg",
+        "description": "A Scandinavian country comprising the Jutland Peninsula and numerous islands, known for its Viking history and modern design.",
+        "cities": [
+            {
+                "title": "Capital Region",
+                "image": "https://imgur.com/capitalregion.jpg",
+                "description": "A region in eastern Denmark, encompassing the capital city, Copenhagen."
+            }
+        ]
+    },
+    {
+        "title": "France",
+        "image": "https://imgur.com/france.jpg",
+        "description": "A country in Western Europe, known for its medieval cities, alpine villages, and Mediterranean beaches.",
+        "cities": [
+            {
+                "title": "Metropolitan France",
+                "image": "https://imgur.com/metropolitanfrance.jpg",
+                "description": "The part of France located in Europe, known for its diverse landscapes and cultural heritage."
+            }
+        ]
+    },
+    {
+        "title": "India",
+        "image": "https://imgur.com/india.jpg",
+        "description": "A South Asian country, known for its diverse culture, languages, and history.",
+        "cities": [
+            {
+                "title": "Madhya Pradesh",
+                "image": "https://imgur.com/madhyapradesh.jpg",
+                "description": "A large state in central India, known for its ancient temples and wildlife."
+            },
+            {
+                "title": "Telangana",
+                "image": "https://imgur.com/telangana.jpg",
+                "description": "A state in southern India, known for its rich history and vibrant culture."
+            },
+            {
+                "title": "Karnataka",
+                "image": "https://imgur.com/karnataka.jpg",
+                "description": "A state in southwest India, known for its technology hub, Bengaluru."
+            },
+            {
+                "title": "Delhi",
+                "image": "https://imgur.com/delhi.jpg",
+                "description": "The capital territory of India, known for its historical landmarks and bustling markets."
+            },
+            {
+                "title": "Tamil Nadu",
+                "image": "https://imgur.com/tamilnadu.jpg",
+                "description": "A state in southern India, known for its Dravidian-style Hindu temples."
+            },
+            {
+                "title": "Kerala",
+                "image": "https://imgur.com/kerala.jpg",
+                "description": "A state on India's tropical Malabar Coast, known for its palm-lined beaches and backwaters."
+            }
+        ]
+    },
+    {
+        "title": "Latvia",
+        "image": "https://imgur.com/latvia.jpg",
+        "description": "A country on the Baltic Sea, known for its diverse culture and rich history.",
+        "cities": [
+            {
+                "title": "Riga",
+                "image": "https://imgur.com/riga.jpg",
+                "description": "The capital city of Latvia, known for its wooden buildings and art nouveau architecture."
+            },
+            {
+                "title": "Jurmala",
+                "image": "https://imgur.com/jurmala.jpg",
+                "description": "A resort town in Latvia, known for its sandy beaches and wooden houses."
+            },
+            {
+                "title": "Marupe Municipality",
+                "image": "https://imgur.com/marupe.jpg",
+                "description": "A municipality in Latvia, known for its proximity to the capital, Riga."
+            }
+        ]
+    },
+    {
+        "title": "Sweden",
+        "image": "https://imgur.com/sweden.jpg",
+        "description": "A Scandinavian nation with thousands of coastal islands and inland lakes, known for its forests and glaciated mountains.",
+        "cities": [
+            {
+                "title": "Västra Götaland County",
+                "image": "https://imgur.com/vastragotaland.jpg",
+                "description": "A county in western Sweden, known for its vibrant city, Gothenburg."
+            },
+            {
+                "title": "Skåne County",
+                "image": "https://imgur.com/skane.jpg",
+                "description": "A county in southern Sweden, known for its rich agricultural land and historic towns."
+            }
+        ]
+    },
+    {
+        "title": "Hungary",
+        "image": "https://imgur.com/hungary.jpg",
+        "description": "A landlocked country in Central Europe, known for its thermal baths and rich history.",
+        "cities": [
+            {
+                "title": "Central Hungary",
+                "image": "https://imgur.com/centralhungary.jpg",
+                "description": "A region in Hungary, home to the capital city, Budapest."
+            }
+        ]
+    },
+    {
+        "title": "Estonia",
+        "image": "https://imgur.com/estonia.jpg",
+        "description": "A country in Northern Europe, known for its medieval architecture and digital society.",
+        "cities": [
+            {
+                "title": "Harju County",
+                "image": "https://imgur.com/harju.jpg",
+                "description": "A county in northern Estonia, home to the capital city, Tallinn."
+            },
+            {
+                "title": "Pärnu County",
+                "image": "https://imgur.com/parnu.jpg",
+                "description": "A county in southwestern Estonia, known for its beach resorts and spas."
+            }
+        ]
+    },
+    {
+        "title": "Finland",
+        "image": "https://imgur.com/finland.jpg",
+        "description": "A Northern European nation bordering Sweden, Norway, and Russia, known for its vast forests and numerous lakes.",
+        "cities": [
+            {
+                "title": "Mainland Finland",
+                "image": "https://imgur.com/mainlandfinland.jpg",
+                "description": "The main part of Finland, known for its natural beauty and vibrant cities."
+            }
+        ]
+    },
+    {
+        "title": "Austria",
+        "image": "https://imgur.com/austria.jpg",
+        "description": "A landlocked East Alpine country in the southern part of Central Europe, known for its mountain villages and baroque architecture.",
+        "cities": [
+            {
+                "title": "Tyrol",
+                "image": "https://imgur.com/tyrol.jpg",
+                "description": "A state in western Austria, known for its alpine landscapes and winter sports."
+            }
+        ]
+    },
+    {
+        "title": "Norway",
+        "image": "https://imgur.com/norway.jpg",
+        "description": "A Scandinavian country encompassing mountains, glaciers, and deep coastal fjords, known for its Viking history.",
+        "cities": [
+            {
+                "title": "Oslo",
+                "image": "https://imgur.com/oslo.jpg",
+                "description": "The capital city of Norway, known for its green spaces and museums."
+            },
+            {
+                "title": "Østfold",
+                "image": "https://imgur.com/ostfold.jpg",
+                "description": "A county in southeastern Norway, known for its coastal towns and historical sites."
+            }
+        ]
+    }
+]

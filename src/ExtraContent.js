@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Typography, Grid, Card, CardMedia, CardContent } from '@material-ui/core';
 
-import berlin from './/images/berlin.jpg'
-import poznan from './/images/poznan.jpg'
-import milan from './/images/milan.jpg'
+import { countryToAlpha2 } from "country-to-iso";
+
+import uniqueLocData from './data/unique_locations_linktree.json'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -24,21 +25,30 @@ const useStyles = makeStyles((theme) => ({
     travelCard: {
         maxWidth: 345,
         margin: theme.spacing(2),
-        boxShadow: theme.shadows[5],
+        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)', // Softer shadow
         transition: 'transform 0.3s, box-shadow 0.3s',
         cursor: 'pointer',
+        backgroundColor: '#1e1e1e', // Card background
         '&:hover': {
             transform: 'scale(1.05)',
-            boxShadow: theme.shadows[10],
+            boxShadow: '0 8px 30px rgba(0, 0, 0, 0.3)', // Enhanced shadow on hover
         },
     },
     media: {
         height: 140,
+        filter: 'brightness(0.8)', // Darken images slightly
+    },
+    cardTitle: {
+        color: '#ff9800', // Accent color for titles
+    },
+    cardDescription: {
+        color: '#b0bec5', // Subtle text color for descriptions
     },
 }));
 
 const ExtraContent = () => {
     const classes = useStyles();
+
 
     return (
         <Box className={classes.root}>
@@ -47,31 +57,26 @@ const ExtraContent = () => {
                     Our 2024 Travel Highlights
                 </Typography>
                 <Grid container spacing={3} justifyContent="center">
-                    {[
-                        { title: 'Berlin', image: berlin, description: 'Explore the vibrant culture and history of Germany\'s capital.' },
-                        { title: 'Poznań', image: poznan, description: 'Discover the charming streets and rich history of this Polish city.' },
-                        { title: 'Milan', image: milan, description: 'Experience the fashion and design capital of Italy.' },
-                        { title: 'Munich', image: milan, description: 'Enjoy the Bavarian culture and beautiful architecture.' },
-                        { title: 'Warsaw', image: milan, description: 'Visit the bustling capital of Poland with its mix of modern and historical attractions.' }
-                    ].map((trip, index) => (
+                    {uniqueLocData.map((trip, index) => (
                         <Grid item xs={12} sm={6} md={4} key={index}>
-                            <Card className={classes.travelCard}>
-                                <CardMedia
-                                    component="img"
-                                    className={classes.media}
-                                    image={trip.image}
-                                    title={trip.title}
-                                    src={trip.image}
-                                />
-                                <CardContent>
-                                    <Typography variant="h6" component="h2">
-                                        {trip.title}
-                                    </Typography>
-                                    <Typography variant="body2" color="textSecondary" component="p">
-                                        {trip.description}
-                                    </Typography>
-                                </CardContent>
-                            </Card>
+                            <Link to={`/travelplans?title=${encodeURIComponent(trip.title)}`}>
+                                <Card className={classes.travelCard}>
+                                    <CardMedia
+                                        component="img"
+                                        className={classes.media}
+                                        title={trip.title}
+                                        src={`https://flagcdn.com/${countryToAlpha2(trip.title).toLowerCase()}.svg`}
+                                    />
+                                    <CardContent>
+                                        <Typography variant="h6" component="h2" className={classes.cardTitle}>
+                                            {trip.title}
+                                        </Typography>
+                                        <Typography variant="body2" component="p" className={classes.cardDescription}>
+                                            {trip.description}
+                                        </Typography>
+                                    </CardContent>
+                                </Card>
+                            </Link>
                         </Grid>
                     ))}
                 </Grid>
