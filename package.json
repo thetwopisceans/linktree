@@ -2,7 +2,7 @@
   "name": "linkhub",
   "version": "1.0.0",
   "description": "A React-based LinkHub application for managing travel resources.",
-  "homepage": "https://thetwopisceans.github.io/linktree",
+  "homepage": "https://thetwopisceans.com",
   "main": "src/index.js",
   "scripts": {
     "predeploy": "npm run build",
