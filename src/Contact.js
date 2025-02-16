@@ -83,9 +83,7 @@ const ContactPage = () => {
                             <Page
                                 key={`page_${index + 1}`}
                                 pageNumber={index + 1}
-                                width={fitHorizontal ? wrapperWidth : null}
-                                height={!fitHorizontal ? wrapperHeight : null}
-                                onLoadSuccess={(page) => removeTextLayerOffset(page)} />
+                                width={window?.innerWidth} height={window?.innerHeight} pageIndex={0} renderAnnotationLayer={false} renderTextLayer={false} />
                         ))}
                     </Document>
                 </div>
