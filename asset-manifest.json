@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/static/js/main.f9e750bc.js",
+    "main.js": "/static/js/main.b01f3542.js",
     "static/media/full-profile-media-kit.pdf": "/static/media/full-profile-media-kit.48b8920df9b84b41be30.pdf",
     "static/media/min-profile-media-kit.pdf": "/static/media/min-profile-media-kit.d9825a133ac321b013a1.pdf",
     "static/media/travel-dark-bg-1.jpg": "/static/media/travel-dark-bg-1.ab201897b0df16b1d45f.jpg",
     "static/media/logo.png": "/static/media/logo.364b2aad1cd339c310bd.png",
     "static/media/me.jpeg": "/static/media/me.da0baf8a323856226d8a.jpeg",
     "index.html": "/index.html",
-    "main.f9e750bc.js.map": "/static/js/main.f9e750bc.js.map"
+    "main.b01f3542.js.map": "/static/js/main.b01f3542.js.map"
   },
   "entrypoints": [
-    "static/js/main.f9e750bc.js"
+    "static/js/main.b01f3542.js"
   ]
 }
