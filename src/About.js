@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Document, Page } from 'react-pdf';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Typography } from '@material-ui/core';
+import { useElementSize } from '@custom-react-hooks/use-element-size';
 
 import minMediaKit from './data/min-profile-media-kit.pdf'
 
@@ -20,11 +21,37 @@ const useStyles = makeStyles((theme) => ({
 const AboutPage = () => {
     const classes = useStyles();
     const [numPages, setNumPages] = useState(null);
+    const [pageWidth, setPageWidth] = useState(0);
+    const [pageHeight, setPageHeight] = useState(0);
+    const [ref, { width: wrapperWidth, height: wrapperHeight }] = useElementSize();
+
+    const fitHorizontal = useMemo(() => {
+        const wRatio = pageWidth / wrapperWidth;
+        const hRatio = pageHeight / wrapperHeight;
+        if (wRatio < hRatio) {
+            return false;
+        }
+        return true;
+    }, [pageHeight, pageWidth, wrapperWidth, wrapperHeight]);
+
 
     const onDocumentLoadSuccess = ({ numPages }) => {
         setNumPages(numPages);
     };
 
+    function removeTextLayerOffset(page) {
+        setPageWidth(page.width);
+        setPageHeight(page.height);
+        const textLayers = document.querySelectorAll(".react-pdf__Page__textContent");
+        textLayers.forEach(layer => {
+            layer.remove()
+        });
+
+        const annotationLayers = document.querySelectorAll(".react-pdf__Page__annotations");
+        annotationLayers.forEach(layer => {
+            layer.remove()
+        });
+    }
 
     return (
         <Box className={classes.root}>
@@ -37,24 +64,17 @@ const AboutPage = () => {
             <div className={classes.pdfContainer}>
                 <Document file={minMediaKit} onLoadSuccess={onDocumentLoadSuccess}>
                     {Array.from(new Array(numPages), (el, index) => (
-                        <Page width={"1000"} key={`page_${index + 1}`} pageNumber={index + 1} onLoadSuccess={removeTextLayerOffset} />
+                        <Page
+                            key={`page_${index + 1}`}
+                            pageNumber={index + 1}
+                            width={fitHorizontal ? wrapperWidth : null}
+                            height={!fitHorizontal ? wrapperHeight : null}
+                            onLoadSuccess={(page) => removeTextLayerOffset(page)} />
                     ))}
                 </Document>
             </div>
         </Box>
     );
 };
-
-function removeTextLayerOffset() {
-    const textLayers = document.querySelectorAll(".react-pdf__Page__textContent");
-    textLayers.forEach(layer => {
-        layer.remove()
-    });
-
-    const annotationLayers = document.querySelectorAll(".react-pdf__Page__annotations");
-    annotationLayers.forEach(layer => {
-        layer.remove()
-    });
-}
 
 export default AboutPage;
