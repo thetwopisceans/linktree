@@ -1695,6 +1695,11 @@
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.10.5.tgz#3a1c12c959010a55c17d46b395ed3047b545c246"
   integrity sha512-kkKUDVlII2DQiKy7UstOR1ErJP8kUKAQ4oa+SQtM0K+lPdmmjj0YnnxBgtTVYH7mUKtbsxeFC9y0AmK7Yb78/A==
 
+"@simplepdf/react-embed-pdf@^1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@simplepdf/react-embed-pdf/-/react-embed-pdf-1.9.0.tgz#3efdd3a6545fbaf9019cf731c30431fa9293b7e4"
+  integrity sha512-qp0K5Fh8E+Zk7m3vyHtvksNlozOUyYRG2wR/TiEjhNh12kj+ar4N+1rEJA7BOsf/M2HnSplwjNOPuci2CKkKGg==
+
 "@sinclair/typebox@^0.24.1":
   version "0.24.51"
   resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.24.51.tgz#645f33fe4e02defe26f2f5c0410e1c094eac7f5f"
@@ -8409,6 +8414,11 @@ react-twitter-embed@^4.0.4:
   integrity sha512-2JIL7qF+U62zRzpsh6SZDXNI3hRNVYf5vOZ1WRcMvwKouw+xC00PuFaD0aEp2wlyGaZ+f4x2VvX+uDadFQ3HVA==
   dependencies:
     scriptjs "^2.5.9"
+
+react-type-animation@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/react-type-animation/-/react-type-animation-3.2.0.tgz#6863d5d60e3beb237f2bd690cceb585402c47e6a"
+  integrity sha512-WXTe0i3rRNKjmggPvT5ntye1QBt0ATGbijeW6V3cQe2W0jaMABXXlPPEdtofnS9tM7wSRHchEvI9SUw+0kUohw==
 
 react-youtube@^10.1.0:
   version "10.1.0"

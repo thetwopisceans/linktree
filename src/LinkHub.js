@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Typography, Grid, Link, IconButton } from '@material-ui/core';
-import { Document } from 'react-pdf'
+import { TypeAnimation } from 'react-type-animation';
 
 import ExtraContent from './ExtraContent';
 import HamburgerMenu from './HamburgerMenu';
@@ -14,7 +14,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 
 import profilePic from './images/me.jpeg'
 import travelBg from './images/travel-dark-bg-1.jpg'
-import minMediaKit from './data/min-profile-media-kit.pdf'
+import logo from './images/logo.png'; // Add your logo image here
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -81,6 +81,13 @@ const useStyles = makeStyles((theme) => ({
         width: theme.spacing(28),
         marginTop: theme.spacing(4),
     },
+    logo: {
+        position: 'absolute',
+        top: theme.spacing(2),
+        right: theme.spacing(2),
+        width: '100px',
+        height: '50px', // Adjust size as needed
+    },
     '@keyframes pulse': {
         '0%': {
             transform: 'scale(1)',
@@ -102,11 +109,26 @@ const LinkHub = () => {
 
     return (
         <Box className={classes.root}>
+            <img src={logo} alt="Logo" className={classes.logo} />
             <HamburgerMenu />
             <img className={classes.profilePic} src={profilePic} alt="The Two Piscean's profile pic" />
-            <Typography variant="h4" className={classes.welcomeText}>
-                <strong>Welcome to thetwopisceans!</strong>
-            </Typography>
+            <TypeAnimation
+                sequence={[
+                    // Same substring at the start will only be typed out once, initially
+                    'Welcome to THETWOPISCEANS!',
+                    1000, // wait 1s before replacing "Mice" with "Hamsters"
+                    // 'For Travel Tips!',
+                    // 1000,
+                    // 'For Travel Ideas!',
+                    // 1000,
+                    // 'For Much More!',
+                    // 1000
+                ]}
+                wrapper="span"
+                speed={20}
+                style={{ fontSize: '2em', display: 'inline-block', color: '#ff4081' }}
+                repeat={Infinity}
+            />
             <Typography variant="body1" className={classes.description}>
                 Your ultimate destination for hassle-free travel planning! We've curated a collection of our favorite travel resources for you.
             </Typography>
@@ -140,7 +162,6 @@ const LinkHub = () => {
                     </Grid>
                 ))}
             </Grid>
-            <iframe src={minMediaKit} width="100%" height="1000px" />
             <Box className={classes.socialIcons}>
                 <IconButton color='inherit' component="a" href="https://www.instagram.com/thetwopisceans/" target="_blank" rel="noopener noreferrer">
                     <InstagramIcon />
