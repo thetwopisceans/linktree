@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Typography, Grid, Card, CardMedia, CardContent, Collapse, IconButton } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
@@ -44,13 +45,16 @@ const useStyles = makeStyles((theme) => ({
 const CountryTravelPlans = () => {
     const classes = useStyles();
     const [expandedIndex, setExpandedIndex] = useState(null);
+    const location = useLocation();
+    const myQuery = location.search;
 
     const handleExpandClick = (index) => {
         setExpandedIndex(expandedIndex === index ? null : index);
     };
 
-    const queryParams = new URLSearchParams(location.search);
+    const queryParams = new URLSearchParams(myQuery);
     const country = queryParams.get('title');
+
     const countryCode = countryToAlpha2(country).toLowerCase()
 
 

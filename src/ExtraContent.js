@@ -34,9 +34,20 @@ const useStyles = makeStyles((theme) => ({
             boxShadow: '0 8px 30px rgba(0, 0, 0, 0.3)', // Enhanced shadow on hover
         },
     },
+    travelLink: {
+        textDecoration: 'none',
+    },
     media: {
-        height: 140,
+        height: 'auto',
+        width: '70%',
+        marginTop: '5%',
+        justifySelf: 'center',
         filter: 'brightness(0.8)', // Darken images slightly
+        transition: 'filter 0.3s ease, transform 0.3s ease', // Add transition for filter and transform
+        '&:hover': {
+            filter: 'brightness(1)', // Brighten image on hover
+            transform: 'scale(1.2)', // Slightly scale up the image on hover
+        },
     },
     cardTitle: {
         color: '#ff9800', // Accent color for titles
@@ -49,7 +60,6 @@ const useStyles = makeStyles((theme) => ({
 const ExtraContent = () => {
     const classes = useStyles();
 
-
     return (
         <Box className={classes.root}>
             <Box className={classes.travelContent}>
@@ -59,7 +69,10 @@ const ExtraContent = () => {
                 <Grid container spacing={3} justifyContent="center">
                     {uniqueLocData.map((trip, index) => (
                         <Grid item xs={12} sm={6} md={4} key={index}>
-                            <Link to={`/travelplans?title=${encodeURIComponent(trip.title)}`}>
+                            <Link
+                                to={`/travelplans?title=${encodeURIComponent(trip.title)}`}
+                                className={classes.travelLink}
+                            >
                                 <Card className={classes.travelCard}>
                                     <CardMedia
                                         component="img"

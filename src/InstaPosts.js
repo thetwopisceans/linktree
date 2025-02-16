@@ -1,29 +1,8 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { makeStyles, createTheme, ThemeProvider } from '@material-ui/core/styles';
+import { makeStyles, createTheme } from '@material-ui/core/styles';
 import { Box, Typography } from '@material-ui/core';
 import { InstagramEmbed } from 'react-social-media-embed';
-
-const darkTheme = createTheme({
-    palette: {
-        type: 'dark',
-        background: {
-            default: '#121212',
-            paper: '#1e1e1e',
-        },
-        text: {
-            primary: '#ffffff',
-            secondary: '#b0b0b0',
-        },
-    },
-    shadows: ['none', '0px 4px 6px rgba(0, 0, 0, 0.1)', '0px 8px 10px rgba(0, 0, 0, 0.15)'],
-    typography: {
-        fontFamily: 'Roboto, sans-serif',
-        h5: {
-            color: '#ff9800', // Accent color for headings
-        },
-    },
-});
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -72,21 +51,19 @@ const InstagramPosts = () => {
     ];
 
     return (
-        <ThemeProvider theme={darkTheme}>
-            <Box className={classes.root}>
-                <Typography variant="h5" gutterBottom>
-                    Instagram Posts for {title}
-                </Typography>
-                {instagramUrls.map((url, index) => (
-                    <Box key={index} className={classes.embedContainer}>
-                        <InstagramEmbed
-                            url={url}
-                            width={320}
-                        />
-                    </Box>
-                ))}
-            </Box>
-        </ThemeProvider>
+        <Box className={classes.root}>
+            <Typography variant="h5" gutterBottom>
+                Instagram Posts for {title}
+            </Typography>
+            {instagramUrls.map((url, index) => (
+                <Box key={index} className={classes.embedContainer}>
+                    <InstagramEmbed
+                        url={url}
+                        width={320}
+                    />
+                </Box>
+            ))}
+        </Box>
     );
 };
 

@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { Document, Page } from 'react-pdf';
-import { makeStyles, createTheme, ThemeProvider } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import { Box, Typography } from '@material-ui/core';
 import { useElementSize } from '@custom-react-hooks/use-element-size';
 
@@ -20,18 +20,6 @@ const useStyles = makeStyles((theme) => ({
         marginTop: theme.spacing(2),
     },
 }));
-
-const darkTheme = createTheme({
-    palette: {
-        type: 'dark',
-        background: {
-            default: '#121212',
-        },
-        text: {
-            primary: '#ffffff',
-        },
-    },
-});
 
 const ContactPage = () => {
     const classes = useStyles();
@@ -69,26 +57,24 @@ const ContactPage = () => {
     }
 
     return (
-        <ThemeProvider theme={darkTheme}>
-            <Box className={classes.root}>
-                <Typography variant="h4" gutterBottom>
-                    About Us
-                </Typography>
-                <Typography variant="body1">
-                    Learn more about our mission and values by exploring our media kit.
-                </Typography>
-                <div className={classes.pdfContainer}>
-                    <Document file={minMediaKit} onLoadSuccess={onDocumentLoadSuccess}>
-                        {Array.from(new Array(numPages), (el, index) => (
-                            <Page
-                                key={`page_${index + 1}`}
-                                pageNumber={index + 1}
-                                width={window?.innerWidth} height={window?.innerHeight} pageIndex={0} renderAnnotationLayer={false} renderTextLayer={false} />
-                        ))}
-                    </Document>
-                </div>
-            </Box>
-        </ThemeProvider>
+        <Box className={classes.root}>
+            <Typography variant="h4" gutterBottom>
+                About Us
+            </Typography>
+            <Typography variant="body1">
+                Learn more about our mission and values by exploring our media kit.
+            </Typography>
+            <div className={classes.pdfContainer}>
+                <Document file={minMediaKit} onLoadSuccess={onDocumentLoadSuccess}>
+                    {Array.from(new Array(numPages), (el, index) => (
+                        <Page
+                            key={`page_${index + 1}`}
+                            pageNumber={index + 1}
+                            width={window?.innerWidth} height={window?.innerHeight} pageIndex={0} renderAnnotationLayer={false} renderTextLayer={false} />
+                    ))}
+                </Document>
+            </div>
+        </Box>
     );
 };
 export default ContactPage;

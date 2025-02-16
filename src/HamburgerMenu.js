@@ -1,25 +1,24 @@
 import React, { useState } from 'react';
-import { Drawer, IconButton, List, ListItem, ListItemText, createTheme, ThemeProvider } from '@material-ui/core';
+import { Drawer, IconButton, List, ListItem, ListItemText } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
 import { makeStyles } from '@material-ui/core/styles';
 
 import logo from './images/logo.png';
 
-// Create a dark theme
-const darkTheme = createTheme({
-    palette: {
-        type: 'dark',
-    },
-});
 
 const useStyles = makeStyles((theme) => ({
     drawerPaper: {
-        backgroundColor: '#1c1c1c', // Dark background color
-        color: '#ffffff', // Light text color
-        width: 250, // Width of the drawer
-        transition: 'transform 0.3s ease-in-out', // Smooth transition effect
-        marginTop: '5%',
+        backgroundColor: '#1c1c1c',
+        color: '#ffffff',
+        width: 250,
+        transition: 'transform 0.3s ease-in-out',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        height: '100%',
+        border: '1px solid #444',
+        justifyContent: 'flex-start',
     },
     listItem: {
         '&:hover': {
@@ -51,41 +50,39 @@ const HamburgerMenu = () => {
     ];
 
     return (
-        <ThemeProvider theme={darkTheme}>
-            <div>
-                <IconButton
-                    edge="start"
-                    color="inherit"
-                    aria-label="menu"
-                    onClick={toggleDrawer(true)}
-                    style={{ position: 'absolute', left: 10 }} // Align to the left
-                >
-                    <MenuIcon />
-                </IconButton>
-                <Drawer
-                    anchor="left"
-                    open={drawerOpen}
-                    onClose={toggleDrawer(false)}
-                    classes={{ paper: classes.drawerPaper }}
-                >
-                    <List>
-                        {menuItems.map((item, index) => (
-                            <ListItem
-                                button
-                                component={Link}
-                                to={item.path}
-                                onClick={toggleDrawer(false)}
-                                className={classes.listItem}
-                                key={index}
-                            >
-                                <ListItemText primary={item.text} />
-                            </ListItem>
-                        ))}
-                    </List>
-                    <img src={logo} alt="Logo" className={classes.logo} />
-                </Drawer>
-            </div>
-        </ThemeProvider>
+        <div>
+            <IconButton
+                edge="start"
+                color="inherit"
+                aria-label="menu"
+                onClick={toggleDrawer(true)}
+                style={{ position: 'absolute', left: 10 }} // Align to the left
+            >
+                <MenuIcon />
+            </IconButton>
+            <Drawer
+                anchor="left"
+                open={drawerOpen}
+                onClose={toggleDrawer(false)}
+                classes={{ paper: classes.drawerPaper }}
+            >
+                <img src={logo} alt="Logo" width={80} className={classes.logo} />
+                <List>
+                    {menuItems.map((item, index) => (
+                        <ListItem
+                            button
+                            component={Link}
+                            to={item.path}
+                            onClick={toggleDrawer(false)}
+                            className={classes.listItem}
+                            key={index}
+                        >
+                            <ListItemText primary={item.text} />
+                        </ListItem>
+                    ))}
+                </List>
+            </Drawer>
+        </div>
     );
 };
 

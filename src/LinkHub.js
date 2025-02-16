@@ -109,10 +109,10 @@ const LinkHub = () => {
 
     return (
         <Box className={classes.root}>
-            <img src={logo} alt="Logo" className={classes.logo} />
             <HamburgerMenu />
             <img className={classes.profilePic} src={profilePic} alt="The Two Piscean's profile pic" />
-            <TypeAnimation
+            <img src={logo} alt="Logo" width={150} style={{ margin: 10 }} />
+            {/* <TypeAnimation
                 sequence={[
                     // Same substring at the start will only be typed out once, initially
                     'Welcome to THETWOPISCEANS!',
@@ -128,7 +128,7 @@ const LinkHub = () => {
                 speed={20}
                 style={{ fontSize: '2em', display: 'inline-block', color: '#ff4081' }}
                 repeat={Infinity}
-            />
+            /> */}
             <Typography variant="body1" className={classes.description}>
                 Your ultimate destination for hassle-free travel planning! We've curated a collection of our favorite travel resources for you.
             </Typography>
@@ -179,7 +179,7 @@ const LinkHub = () => {
                     <GitHubIcon />
                 </IconButton>
             </Box>
-            <ExtraContent />
+            {/* <ExtraContent /> */}
         </Box>
     );
 };
