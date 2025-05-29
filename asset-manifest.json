@@ -1,15 +1,14 @@
 {
   "files": {
-    "main.js": "/static/js/main.c139c206.js",
-    "static/media/full-profile-media-kit-new.pdf": "/static/media/full-profile-media-kit-new.fd7a2e5f205d939c01ca.pdf",
-    "static/media/min-profile-media-kit.pdf": "/static/media/min-profile-media-kit.d9825a133ac321b013a1.pdf",
+    "main.js": "/static/js/main.3f9c95b3.js",
+    "static/media/thetwopisceans-media-kit.pdf": "/static/media/thetwopisceans-media-kit.ce3b29cef73011271e3a.pdf",
     "static/media/travel-dark-bg-1.jpg": "/static/media/travel-dark-bg-1.ab201897b0df16b1d45f.jpg",
     "static/media/logo.png": "/static/media/logo.364b2aad1cd339c310bd.png",
     "static/media/me.jpeg": "/static/media/me.da0baf8a323856226d8a.jpeg",
     "index.html": "/index.html",
-    "main.c139c206.js.map": "/static/js/main.c139c206.js.map"
+    "main.3f9c95b3.js.map": "/static/js/main.3f9c95b3.js.map"
   },
   "entrypoints": [
-    "static/js/main.c139c206.js"
+    "static/js/main.3f9c95b3.js"
   ]
 }
