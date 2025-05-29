@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Box, Typography } from '@material-ui/core';
 import { useElementSize } from '@custom-react-hooks/use-element-size';
 
-import minMediaKit from './data/full-profile-media-kit-new.pdf'
+import minMediaKit from './data/thetwopisceans-media-kit-min.pdf'
 
 const useStyles = makeStyles((theme) => ({
     root: {
